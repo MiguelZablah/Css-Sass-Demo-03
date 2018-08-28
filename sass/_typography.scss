@@ -1,0 +1,20 @@
+%extHeding {
+	font-family: $font-display;
+	font-weight: 400;
+}
+.heading-1 {
+	@extend %extHeding;
+}
+.heading-2 {
+	@extend %extHeding;
+}
+.heading-3 {
+	@extend %extHeding;
+}
+.heading-4 {
+	@extend %extHeding;
+	font-size: 1.9rem;
+
+	&--light { color: $color-grey-light-1}
+	&--dark { color: $color-grey-dark-1}
+}
