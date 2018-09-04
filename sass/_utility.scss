@@ -1,0 +1,6 @@
+// Media queri mixins
+@mixin mediaMax($param){
+	@media only screen and (max-width: $param){
+		@content
+	}
+}

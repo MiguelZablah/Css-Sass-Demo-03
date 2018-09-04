@@ -1,6 +1,7 @@
 .story {
 	&__pictures {
 		background-image: linear-gradient(rgba($color-primary, .5), rgba($color-primary, .5)), url(../img/back.jpg);
+		background-size: cover;
 		grid-column: full-start/col-end 4;
 		// grid-area: spic;
 
@@ -8,6 +9,11 @@
 		grid-template-rows: repeat(6, 1fr);
 		grid-template-columns: repeat(6, 1fr);
 		align-items: center;
+
+		@include mediaMax($bp-medium){
+			grid-column: 1/-1;
+			padding: 3rem;
+		}
 	}
 
 	&__img {
@@ -15,6 +21,10 @@
 			width: 100%;
 			grid-area: 2 / 2 / 6 / 6;
 			box-shadow: 0 2rem 5rem rgba(#000, .1);
+			
+			@include mediaMax($bp-medium){
+				grid-area: 1 / 1 / -1 / 5;
+			}
 		}
 		
 		&--2{
@@ -22,6 +32,11 @@
 			grid-area: 4 / 4 / 6 / 7;
 			box-shadow: 0 2rem 5rem rgba(#000, .2);
 			z-index: 10;
+			
+			@include mediaMax($bp-medium){
+				width: 100%;
+				grid-row: 1 / -1;
+			}
 		}
 	}
 	
@@ -41,6 +56,14 @@
 		display: grid;
 		align-content: center;
 		justify-items: start;
+
+		@include mediaMax($bp-medium){
+			grid-area: 5 / 1 / 6/ -1;
+		}
+
+		@include mediaMax($bp-small){
+			padding: 3rem 8vw;
+		}
 	}
 
 	&__text {

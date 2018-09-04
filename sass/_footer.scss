@@ -3,6 +3,10 @@
 	grid-column: full-start/full-end;
 	// grid-area: foot;
 	padding: 8rem;
+
+	@include mediaMax($bp-small){
+		padding: 2rem;
+	}
 }
 
 .nav {
@@ -11,6 +15,11 @@
 	grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 	grid-gap: 2rem;
 	align-items: center;
+
+	@include mediaMax($bp-small){
+		grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+		grid-gap: 0;
+	}
 
 	&__link:link,
 	&__link:visited {
@@ -40,4 +49,9 @@
 	margin-left: auto;
 	text-align: center;
 	width: 70%;
+
+	@include mediaMax($bp-small){
+		width: 100%;
+		margin-top: 1rem;
+	}
 }
